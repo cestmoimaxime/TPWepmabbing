@@ -1,0 +1,38 @@
+{
+
+	"features":[
+  {
+    "magni": 5.2,
+    "prof": 40,
+    "lat": 46.8452,
+    "lng": 2.5412,
+    "ppv": "bonjour",
+    "terr": True,
+    "cot": 0,
+    "dist": null
+  },
+
+  {
+    "magni": 6.1,
+    "prof": 25,
+    "lat": -100.541,
+    "lng": 12.5412,
+    "ppv": "bonjour",
+    "terr": False,
+    "cot": 0,
+    "dist": null
+  },
+
+	{
+		"magni": 9,
+    "prof": 1,
+    "lat": 20.541,
+    "lng": 120.5412,
+    "ppv": "bonjour",
+    "terr": True,
+    "cot": 0,
+    "dist": null
+	}
+  ]
+
+}

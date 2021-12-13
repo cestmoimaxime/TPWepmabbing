@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>WepMabbing</title>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+    <script src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <body style="background-color:#1baffe;">
+
+  </head>
+  <body>
+    <center>
+
+    <div id="map" style="width: 800px; height: 500px;"></div>
+
+
+  </center>
+
+  <script>
+  var mus = document.getElementById("blue");
+  var but = document.getElementById("boutonbleu");
+  but.addEventListener("click", function() {mus.play();});
+  </script>
+
+    <!-- <script src="leafletProjet.js"></script> -->
+
+    <script>
+
+    L.mapquest.key = 'k9XJLiLRP7zwB1g4wCBDF7y9cK8843k0';
+
+        // 'map' refers to a <div> element with the ID map
+      var carte =  L.mapquest.map('map', <draggable> : false{
+            center: [48.8649, 2.3594],
+            layers: L.mapquest.tileLayer('map'),
+            zoom: 12
+        });
+
+
+      var marqueur =   L.marker([48.8, 2.8], {
+          icon: L.mapquest.icons.marker({
+            primaryColor: '#22407F',
+            secondaryColor: '#3B5998',
+            shadow: true,
+            size: 'md',
+            symbol: 'A'
+          })
+        });
+
+        $.get("données.php?q=my_tdt1.json", function(data){
+            console.log(data.features);
+        console.log(data.features);
+        });
+
+    marqueur.addTo(carte);
+
+
+    </script>
+
+  </body>
+
+</html>
